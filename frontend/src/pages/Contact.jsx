@@ -13,7 +13,7 @@ const Contact = () => {
         setStatus({ loading: true, error: null, success: null });
 
         try {
-            const res = await fetch('http://localhost:5000/api/messages', {
+            const res = await fetch('https://portfolio-x7rl.onrender.com/api/messages', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -174,6 +174,18 @@ const Contact = () => {
                                 <div>
                                     <p className="text-sm text-gray-500 font-medium">Architecture & Code</p>
                                     <p className="text-white font-bold group-hover:text-purple-400 transition-colors">github.com/Khush2040</p>
+                                </div>
+                            </div>
+                        </MagneticButton>
+
+                        <MagneticButton href="https://www.linkedin.com/in/khushboo0705/">
+                            <div className="flex items-center gap-4 p-4 rounded-2xl glass border border-white/5 hover:bg-white/5 transition-colors group cursor-pointer w-full mt-4 block">
+                                <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:scale-110 transition-transform">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-gray-300"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                                </div>
+                                <div>
+                                    <p className="text-sm text-gray-500 font-medium">Professional Network</p>
+                                    <p className="text-white font-bold group-hover:text-purple-400 transition-colors">linkedin.com/in/khushboo0705</p>
                                 </div>
                             </div>
                         </MagneticButton>

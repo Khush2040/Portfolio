@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
-import { X, Sun, Moon, Github, Download, Mail, ExternalLink, Settings, LayoutTemplate, Volume2, Sparkles } from 'lucide-react';
+import { X, Sun, Moon, Github, Linkedin, Download, Mail, ExternalLink, Settings, LayoutTemplate, Volume2, Sparkles } from 'lucide-react';
 import { useTheme } from '../../context/ThemeContext';
 import { cn } from './Navbar';
 import { useState, useEffect } from 'react';
@@ -215,6 +215,12 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                                 theme === 'dark' ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
                             )}>
                                 <Github size={20} />
+                            </a>
+                            <a href="https://www.linkedin.com/in/khushboo0705/" target="_blank" rel="noreferrer" className={cn(
+                                "p-2 transition-colors duration-300",
+                                theme === 'dark' ? "text-gray-400 hover:text-white" : "text-gray-500 hover:text-black"
+                            )}>
+                                <Linkedin size={20} />
                             </a>
                             <a href="https://medium.com/@khushypro" target="_blank" rel="noreferrer" className={cn(
                                 "p-2 transition-colors duration-300",

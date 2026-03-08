@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom';
 import { useTheme } from '../../context/ThemeContext';
-import { Sun, Moon, Github, Search } from 'lucide-react';
+import { Sun, Moon, Github, Linkedin, Search } from 'lucide-react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { useState } from 'react';
 import MagneticButton from './MagneticButton';
@@ -103,6 +103,12 @@ const Navbar = () => {
                     <MagneticButton href="https://github.com/Khush2040">
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white">
                             <Github size={18} />
+                        </div>
+                    </MagneticButton>
+
+                    <MagneticButton href="https://www.linkedin.com/in/khushboo0705/">
+                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white">
+                            <Linkedin size={18} />
                         </div>
                     </MagneticButton>
 
