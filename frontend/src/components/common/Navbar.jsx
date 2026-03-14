@@ -7,7 +7,6 @@ import MagneticButton from './MagneticButton';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
-// Helper for clean class merging
 export function cn(...inputs) {
     return twMerge(clsx(inputs));
 }
@@ -18,9 +17,9 @@ const Navbar = () => {
     const { scrollY } = useScroll();
     const [hidden, setHidden] = useState(false);
 
-    // Hide navbar on scroll down, show on scroll up
     useMotionValueEvent(scrollY, "change", (latest) => {
         const previous = scrollY.getPrevious();
+
         if (latest > previous && latest > 150) {
             setHidden(true);
         } else {
@@ -33,6 +32,7 @@ const Navbar = () => {
         { name: 'Experience', path: '/experience' },
         { name: 'Projects', path: '/projects' },
         { name: 'Certifications', path: '/certifications' },
+        { name: 'Achievements', path: '/achievements' },
         { name: 'Blogs', path: '/blogs' },
         { name: 'Contact', path: '/contact' },
     ];
@@ -47,58 +47,88 @@ const Navbar = () => {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="fixed top-6 left-0 right-0 z-50 flex justify-center w-full px-4 pointer-events-none"
         >
+
             <div className="glass pointer-events-auto rounded-full px-6 py-3 flex items-center gap-6 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] border border-white/10 backdrop-blur-xl">
 
-                {/* Logo Area */}
+                {/* Logo */}
+
                 <MagneticButton>
-                    <Link to="/" className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent px-2">
+                    <Link
+                        to="/"
+                        className="text-xl font-black tracking-tighter bg-gradient-to-r from-blue-400 via-purple-400 to-pink-500 bg-clip-text text-transparent px-2"
+                    >
                         K.
                     </Link>
                 </MagneticButton>
 
                 <div className="w-px h-6 bg-white/10" />
 
-                {/* Primary Links */}
+                {/* NAV LINKS */}
+
                 <div className="flex items-center gap-1 sm:gap-2">
+
                     {navLinks.map((link) => {
+
                         const isActive = location.pathname === link.path;
+
                         return (
                             <Link
                                 key={link.name}
                                 to={link.path}
                                 className="relative px-4 py-2"
                             >
-                                <span className={cn(
-                                    "relative z-10 text-sm font-medium transition-colors duration-300",
-                                    isActive ? "text-white" : "text-gray-400 hover:text-white"
-                                )}>
+
+                                <span
+                                    className={cn(
+                                        "relative z-10 text-sm font-medium transition-colors duration-300",
+                                        isActive
+                                            ? "text-white"
+                                            : "text-gray-400 hover:text-white"
+                                    )}
+                                >
                                     {link.name}
                                 </span>
+
                                 {isActive && (
                                     <motion.div
                                         layoutId="nav-pill"
                                         className="absolute inset-0 bg-white/10 rounded-full border border-white/5"
-                                        transition={{ type: "spring", stiffness: 350, damping: 30 }}
+                                        transition={{
+                                            type: "spring",
+                                            stiffness: 350,
+                                            damping: 30
+                                        }}
                                     />
                                 )}
+
                             </Link>
                         );
+
                     })}
+
                 </div>
 
                 <div className="w-px h-6 bg-white/10 hidden sm:block" />
 
-                {/* Socials / Actions */}
+                {/* ACTIONS */}
+
                 <div className="hidden sm:flex items-center gap-2">
+
+                    {/* COMMAND PALETTE */}
+
                     <MagneticButton>
-                        <button
-                            onClick={() => window.dispatchEvent(new CustomEvent('open-command-palette'))}
-                            className="mr-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-gray-400 hover:text-white flex items-center gap-2 text-xs font-mono"
+                        <div
+                            onClick={() =>
+                                window.dispatchEvent(new CustomEvent('open-command-palette'))
+                            }
+                            className="mr-2 px-3 py-1.5 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10 transition-colors text-gray-400 hover:text-white flex items-center gap-2 text-xs font-mono cursor-pointer"
                         >
                             <Search size={14} />
                             <span>Cmd K</span>
-                        </button>
+                        </div>
                     </MagneticButton>
+
+                    {/* GITHUB */}
 
                     <MagneticButton href="https://github.com/Khush2040">
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white">
@@ -106,31 +136,49 @@ const Navbar = () => {
                         </div>
                     </MagneticButton>
 
+                    {/* LINKEDIN */}
+
                     <MagneticButton href="https://www.linkedin.com/in/khushboo0705/">
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white">
                             <Linkedin size={18} />
                         </div>
                     </MagneticButton>
 
+                    {/* MEDIUM */}
+
                     <MagneticButton href="https://medium.com/@khushypro">
                         <div className="p-2 rounded-full hover:bg-white/10 transition-colors">
+
                             <img
                                 src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Medium_logo_Monogram.svg"
-                                className={cn("w-[18px] h-[18px]", theme === 'dark' ? 'invert sepia saturate-0 hue-rotate-180 brightness-200 opacity-80' : 'opacity-80')}
+                                className={cn(
+                                    "w-[18px] h-[18px]",
+                                    theme === 'dark'
+                                        ? 'invert sepia saturate-0 hue-rotate-180 brightness-200 opacity-80'
+                                        : 'opacity-80'
+                                )}
                                 alt="Medium"
                             />
+
                         </div>
                     </MagneticButton>
 
-                    <MagneticButton onClick={toggleTheme}>
-                        <div className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white cursor-pointer">
+                    {/* THEME TOGGLE */}
+
+                    <MagneticButton>
+                        <div
+                            onClick={toggleTheme}
+                            className="p-2 rounded-full hover:bg-white/10 transition-colors text-gray-300 hover:text-white cursor-pointer"
+                        >
                             {theme === 'dark' ? <Sun size={18} /> : <Moon size={18} />}
                         </div>
                     </MagneticButton>
+
                 </div>
 
             </div>
-        </motion.nav >
+
+        </motion.nav>
     );
 };
 

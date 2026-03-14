@@ -63,11 +63,10 @@ const Experience = () => {
                         A detailed timeline of my professional roles and engineering experience.
                     </p>
                 </div>
-
-                <MagneticButton href="/resume.pdf" download="Khush_Resume.pdf">
+                <MagneticButton href="/Khushboo_generalcv__ (2).pdf" download="resume.pdf">
                     <div className="flex items-center gap-3 glass px-8 py-4 rounded-2xl border border-emerald-500/30 hover:bg-emerald-500/10 text-emerald-400 font-bold tracking-wide transition-all hover:scale-105 group">
                         <Download size={20} className="group-hover:translate-y-1 transition-transform" />
-                        Download Resumé
+                        Download Resume
                     </div>
                 </MagneticButton>
             </motion.div>

@@ -12,7 +12,7 @@ const publicationsData = [
     },
     {
         title: "Synergizing Indian Knowledge Systems and Modern Technology: Pathways Toward Viksit Bharat 2047",
-        description: "Presented at the International Seminar (Hybrid Mode) organized by Amity University Uttar Pradesh in collaboration with ICPR, New Delhi.",
+        description: "Published in the International Seminar (Hybrid Mode) organized by Amity University Uttar Pradesh in collaboration with ICPR, New Delhi.",
         icon: BookOpen,
         color: "text-purple-500 dark:text-purple-400",
         link: "https://www.linkedin.com/posts/khushboo0705_researchpresentation-viksitbharat2047-academicjourney-activity-7418356652476739585-BMss?utm_source=share&utm_medium=member_desktop&rcm=ACoAAEZ2_yABDyaZSty4NHcY-0q8cfsRQZDa8Rs",

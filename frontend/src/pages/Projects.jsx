@@ -10,56 +10,64 @@ const Projects = () => {
             description: 'A full-stack file sharing and management platform featuring a modern dashboard for secure upload, management, and activity tracking with real-time feedback.',
             tags: ['React', 'Full-stack', 'State Management'],
             url: 'https://github.com/Khush2040/FileShare-Pro',
-            color: 'from-blue-500/20 to-indigo-500/20'
+            color: 'from-blue-500/20 to-indigo-500/20',
+            image: '/projects/fileshare_dashboard.png'
         },
         {
             title: 'StyleMate – AI Fashion Assistant',
             description: 'Interactive AI-powered fashion assistant generating personalized outfit suggestions based on mood, occasion, season, and budget.',
             tags: ['HTML', 'CSS', 'JavaScript', 'FastAPI'],
             url: 'https://github.com/Khush2040/StyleMate',
-            color: 'from-purple-500/20 to-pink-500/20'
+            color: 'from-purple-500/20 to-pink-500/20',
+            image: '/projects/stylemate_ai.png'
         },
         {
             title: 'Real-Time-Air-Quality-Index-AQI-Monitoring',
             description: 'Interactive Air Quality Analysis and Prediction System built using machine learning and data visualization to forecast pollution levels.',
             tags: ['Python', 'Streamlit', 'Machine Learning'],
             url: 'https://github.com/Khush2040/Real-Time-Air-Quality-Index-AQI-Monitoring',
-            color: 'from-teal-500/20 to-emerald-500/20'
+            color: 'from-teal-500/20 to-emerald-500/20',
+            image: '/projects/aqi_monitoring.png'
         },
         {
             title: 'EDA-Coffee-Shop-Sales',
             description: 'Exploratory Data Analysis (EDA) of Coffee Shop Sales using Python and Jupyter Notebook. Transforming raw data into readable insights.',
             tags: ['Python', 'Data Analysis', 'Jupyter'],
             url: 'https://github.com/Khush2040/EDA-Coffee-Shop-Sales',
-            color: 'from-blue-500/20 to-cyan-500/20'
+            color: 'from-blue-500/20 to-cyan-500/20',
+            image: '/projects/coffee_sales_eda.png'
         },
         {
             title: 'Sales-Tracker-AI',
             description: 'Responsive sales tracker web app with built-in Gemini chatbot. Switch between light/dark mode, and chat with an AI assistant in text or speech.',
             tags: ['JavaScript', 'HTML', 'AI Integration'],
             url: 'https://github.com/Khush2040/Sales-Tracker-AI',
-            color: 'from-violet-500/20 to-fuchsia-500/20'
+            color: 'from-violet-500/20 to-fuchsia-500/20',
+            image: '/projects/sales_tracker_ai.png'
         },
         {
             title: 'CrewSync',
             description: 'A dynamic JavaScript-based web application providing team synchronization tools, featuring a robust frontend and responsive design.',
             tags: ['JavaScript', 'Web Development'],
             url: 'https://github.com/Khush2040/CrewSync',
-            color: 'from-green-500/20 to-emerald-500/20'
+            color: 'from-green-500/20 to-emerald-500/20',
+            image: '/projects/crewsync_dashboard.png'
         },
         {
             title: 'Dashboard Analysis',
             description: 'A comprehensive visual dashboard for tracking and analyzing integrated scheme performance metrics.',
             tags: ['Dashboard', 'Analytics', 'Data Viz'],
             url: 'https://github.com/Khush2040/Integrated-Scheme-Performance-Report-Dashboard-Analysis',
-            color: 'from-orange-500/20 to-red-500/20'
+            color: 'from-orange-500/20 to-red-500/20',
+            image: '/projects/dashboard_analysis.png'
         },
         {
             title: 'Parking-Management',
             description: 'An enterprise-level Java-based system built to effectively manage and allocate parking spaces organically.',
             tags: ['Java', 'Management Systems'],
             url: 'https://github.com/Khush2040/Parking-Management-System',
-            color: 'from-pink-500/20 to-rose-500/20'
+            color: 'from-pink-500/20 to-rose-500/20',
+            image: '/projects/parking_management.png'
         }
     ];
 
@@ -114,11 +122,20 @@ const Projects = () => {
                         {/* Glow Effect */}
                         <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl`}></div>
 
-                        <div className="relative p-8 flex flex-col h-full z-10">
-                            <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 group-hover:bg-white/10 transition-colors">
-                                <Code2 className="text-gray-300 group-hover:text-blue-400 transition-colors" size={28} />
+                        <div className="relative w-full h-56 sm:h-64 overflow-hidden border-b border-white/10 shrink-0 bg-black/50">
+                            <img 
+                                src={item.image} 
+                                alt={item.title} 
+                                className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out mix-blend-lighten" 
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60"></div>
+                            
+                            <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center group-hover:bg-black/70 transition-colors z-20">
+                                <Code2 className="text-gray-300 group-hover:text-blue-400 transition-colors" size={24} />
                             </div>
+                        </div>
 
+                        <div className="relative p-8 pt-6 flex flex-col flex-grow z-10 bg-gradient-to-b from-transparent to-black/20">
                             <a href={item.url} target="_blank" rel="noopener noreferrer" className="inline-block w-fit">
                                 <h3 className="text-2xl font-bold text-white mb-4 hover:text-blue-400 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-blue-400 group-hover:to-purple-500 transition-all duration-300 flex items-center gap-2 cursor-pointer">
                                     {item.title} <ExternalLink size={20} className="opacity-0 group-hover:opacity-100 transition-opacity text-blue-400" />
