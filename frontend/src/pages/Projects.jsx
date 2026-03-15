@@ -17,7 +17,7 @@ const Projects = () => {
             title: 'StyleMate – AI Fashion Assistant',
             description: 'Interactive AI-powered fashion assistant generating personalized outfit suggestions based on mood, occasion, season, and budget.',
             tags: ['HTML', 'CSS', 'JavaScript', 'FastAPI'],
-            url: 'https://github.com/Khush2040/StyleMate',
+            url: 'https://github.com/Khush2040/StyleMate--Your-AI-Fashion-Assistant',
             color: 'from-purple-500/20 to-pink-500/20',
             image: '/projects/stylemate_ai.png'
         },
@@ -123,13 +123,13 @@ const Projects = () => {
                         <div className={`absolute inset-0 bg-gradient-to-br ${item.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-2xl`}></div>
 
                         <div className="relative w-full h-56 sm:h-64 overflow-hidden border-b border-white/10 shrink-0 bg-black/50">
-                            <img 
-                                src={item.image} 
-                                alt={item.title} 
-                                className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out mix-blend-lighten" 
+                            <img
+                                src={item.image}
+                                alt={item.title}
+                                className="w-full h-full object-cover transform scale-105 group-hover:scale-110 transition-transform duration-700 ease-in-out mix-blend-lighten"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent opacity-60"></div>
-                            
+
                             <div className="absolute top-4 right-4 w-12 h-12 rounded-xl bg-black/50 backdrop-blur-md border border-white/10 flex items-center justify-center group-hover:bg-black/70 transition-colors z-20">
                                 <Code2 className="text-gray-300 group-hover:text-blue-400 transition-colors" size={24} />
                             </div>

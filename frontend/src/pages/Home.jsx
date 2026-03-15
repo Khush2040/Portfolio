@@ -9,8 +9,6 @@ import Services from '../components/home/Services';
 import About from '../components/home/About';
 import Skills from '../components/home/Skills';
 import Education from '../components/home/Education';
-import Awards from '../components/home/Awards';
-import Publications from '../components/home/Publications';
 import Languages from '../components/home/Languages';
 import MagneticButton from '../components/common/MagneticButton';
 import { useRef } from 'react';
@@ -148,8 +146,6 @@ const Home = () => {
             <Services />
             <About />
             <Education />
-            <Awards />
-            <Publications />
             <Languages />
 
         </PageWrapper >

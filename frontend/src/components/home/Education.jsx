@@ -1,5 +1,5 @@
 import { useRef } from 'react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { motion, percent, useScroll, useSpring, useTransform } from 'framer-motion';
 import { Rocket, BookOpen, Award, Code, Briefcase, ArrowUpRight } from 'lucide-react';
 
 const timelineData = [
@@ -8,6 +8,7 @@ const timelineData = [
         title: 'Secondary School',
         company: 'Ch. Chhabil Dass Public School, Ghaziabad',
         description: 'Active in extracurriculars and leadership. Part of the Student Council serving as a Discipline Coordinator.',
+        percentage: '96.6%',
         icon: <BookOpen className="text-blue-400 group-hover:text-cyan-400 transition-colors" size={24} />,
         type: 'Education'
     },
@@ -16,6 +17,7 @@ const timelineData = [
         title: 'Senior Secondary School',
         company: 'Ch. Chhabil Dass Public School, Ghaziabad',
         description: 'Active in extracurriculars and leadership. Part of the Student Council serving as a Discipline Coordinator.',
+        percentage: '77.8%',
         icon: <BookOpen className="text-blue-400 group-hover:text-cyan-400 transition-colors" size={24} />,
         type: 'Education'
     },
@@ -24,6 +26,7 @@ const timelineData = [
         title: 'B.Tech, Computer Science Engineering',
         company: 'Lovely Professional University',
         description: 'Activities and societies: Public Relation Manager at Drive Dev Club. Honing skills like Leadership, JavaScript, and more.',
+        cgpa: '7.13',
         icon: <Award className="text-yellow-400 group-hover:text-yellow-300 transition-colors" size={24} />,
         type: 'Education'
     },
