@@ -14,6 +14,14 @@ const Projects = () => {
             image: '/projects/fileshare_dashboard.png'
         },
         {
+            title: 'EnterpriseAI',
+            description: 'An intelligent multi-agent AI pipeline automating corporate content generation, brand-compliance review, and regional localization.',
+            tags: ['AI', 'Multi-Agent', 'Automation'],
+            url: 'https://github.com/Khush2040/EnterpriseAI',
+            color: 'from-amber-500/20 to-orange-500/20',
+            image: '/projects/enterprise_ai.png'
+        },
+        {
             title: 'StyleMate – AI Fashion Assistant',
             description: 'Interactive AI-powered fashion assistant generating personalized outfit suggestions based on mood, occasion, season, and budget.',
             tags: ['HTML', 'CSS', 'JavaScript', 'FastAPI'],
