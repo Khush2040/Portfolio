@@ -112,7 +112,7 @@ const Sidebar = ({ isOpen, onClose, navLinks }) => {
                             <p className="text-xs font-bold text-gray-500 uppercase tracking-widest mb-3 px-2">Features & Quick Links</p>
 
                             <a
-                                href="/resume.pdf"
+                                href="/Khushboo_GeneralCV_.pdf"
                                 download="Khush_Resume.pdf"
                                 onClick={onClose}
                                 className={cn(

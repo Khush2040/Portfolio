@@ -4,7 +4,7 @@ import MagneticButton from './MagneticButton';
 const FloatingResumeButton = () => {
     return (
         <div className="fixed bottom-8 right-8 z-[100]">
-            <MagneticButton href="/resume.pdf">
+            <MagneticButton href="/Khushboo_GeneralCV_.pdf">
                 <div className="group relative flex items-center justify-center w-16 h-16 rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-2xl hover:shadow-[0_0_30px_rgba(59,130,246,0.5)] transition-all duration-300">
                     <Download size={24} className="group-hover:-translate-y-1 group-hover:scale-110 transition-transform duration-300" />
 
